@@ -1,2 +1,12 @@
 # cb-csv-input
-simple script to load csv data into couchbase buckets with some data manipulating &amp; formatting options
+
+NOT PRODUCTION READY
+
+simple python script to load csv data into couchbase buckets with some data manipulating &amp; formatting options
+
+requirements: couchbase python SDK: http://docs.couchbase.com/developer/python-2.0/introduction.html
+
+configuration examples in config folder
+
+if no config file specified, the script will ask for required options
+
