@@ -50,13 +50,19 @@ def reassign_keys(header):
 
 def couchbase_connect(config):
     if not 'couchbase_connect' in config:
+        host = str(input('host: '))
         bucket = str(input('bucket name: '))
         pwd = str(input('password: '))
     else:
         bucket = config['couchbase_connect']['bucket']
         pwd = config['couchbase_connect']['pwd']
+        if 'host' in config['couchbase_connect']:
+            host = config['couchbase_connect']['host']
+        else:
+            # default
+            host = 'localhost'
     try:
-        c = Bucket('couchbase://localhost/%s' % bucket, password=pwd)
+        c = Bucket('couchbase://%s/%s' % (host, bucket), password=pwd)
     except Exception as e:
         print(e)
         print('cannot connect to couchbase')
