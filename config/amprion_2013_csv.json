@@ -1,0 +1,33 @@
+{
+    "extra_data": {"year": 2013, "source": "amprion_2013_csv", "kind": "anlagestammdaten", "type": "base"},
+    "date_formatting": {
+        "fields": ["date_plugoff", "date_start", "date_plugin", "date_stop"],
+        "strformat": "%d.%m.%Y"
+    },
+    "decimal_fields": ["power_kwh"],
+    "upsert_package": 1000,
+    "couchbase_connect": {
+        "bucket": "eeg",
+        "pwd": "eeg"
+    },
+    "replacing": {
+        "state": {
+             "BB": "Brandenburg",
+             "BE": "Berlin",
+             "BW": "Baden-Württemberg",
+             "BY": "Bayern",
+             "HB": "Bremen",
+             "HE": "Hessen",
+             "HH": "Hamburg",
+             "MV": "Mecklenburg-Vorpommern",
+             "NI": "Niedersachsen",
+             "NW": "Nordrhein-Westfalen",
+             "RP": "Rheinland-Pfalz",
+             "SH": "Schleswig-Holstein",
+             "SL": "Saarland",
+             "SN": "Sachsen",
+             "ST": "Sachsen-Anhalt",
+             "TH": "Thüringen"
+        }
+    }
+}

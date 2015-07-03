@@ -1,0 +1,9 @@
+{
+    "extra_data": {"year": 2011, "source": "50hertz_move_2011_csv", "tags": ["dsg"], "kind": "bewegungsdaten", "type": "payment", "tso": "50Hertz Transmission GmbH"},
+    "decimal_fields": ["revenue", "vnne", "power_kwh"],
+    "upsert_package": 1000,
+    "couchbase_connect": {
+        "bucket": "eeg",
+        "pwd": "eeg"
+    }
+}
